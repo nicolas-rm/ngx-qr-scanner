@@ -1,26 +1,26 @@
-h1,
-h5,
-p {
-  font-weight: 600;
-  word-break: break-all;
-  font-family: 'Courier New', Courier, monospace;
-}
-div {
-  text-align: center;
-  background: #fdfdfd;
-  
-  button {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    margin: 4px;
-    &disabled {
-      cursor: no-drop;
-    }
-  }
+// .round-button {
+//     border-radius: 50%;
+//     height: 60px;
+//     width: 60px;
+//     margin: 4px;
+//     font-size: 10px;
+//     &disabled {
+//         cursor: no-drop;
+//     }
+// }
 
-  .data {
+.data {
     background: antiquewhite;
     border-radius: 5px;
-  }
+}
+
+// .bg-primary-outline
+.bg-primary-outline {
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    &:hover {
+        background-color: #007bff;
+        color: white;
+    }
 }
