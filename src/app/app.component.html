@@ -2,7 +2,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button> -->
                 <div class="input-group mb-3 w-100">
                     <input type="text" class="form-control" placeholder="Guía De Rastreo" aria-label="Guía De Rastreo" aria-describedby="button-addon2" />
                     <button class="btn btn-primary" type="button" id="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">
@@ -47,10 +46,10 @@
                                         </td>
                                         <td class="text-wrap" align="left" valign="middle">
                                             <div class="button-group">
-                                                <a type="button" class="btn btn-outline-primary mx-1">
+                                                <a type="button" class="btn btn-outline-primary mx-1" id="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModalGuia">
                                                     <i class="ti ti-pencil-bolt"></i>
                                                 </a>
-                                                <a type="button" class="btn btn-outline-danger mx-1">
+                                                <a type="button" class="btn btn-outline-danger mx-1" id="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModalEliminarGuia">
                                                     <i class="ti ti-trash-x"></i>
                                                 </a>
                                             </div>
@@ -66,7 +65,7 @@
     </div>
 
     <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Escanear Guía</h1>
@@ -78,6 +77,51 @@
                 <div class="modal-footer">
                     <button id="buttonCloseModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar guía -->
+<div class="modal fade" id="exampleModalGuia" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Guía</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="inputCodigo" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="inputCodigo" placeholder="Código" />
+                </div>
+                <div class="mb-3">
+                    <label for="inputFecha" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="inputFecha" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="buttonCloseModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="buttonGuardarGuia" type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de confirmacion para eliminar guía -->
+<div class="modal fade" id="exampleModalEliminarGuia" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Eliminar Guía</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro que desea eliminar la guía?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="buttonCloseModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="buttonEliminarGuia" type="button" class="btn btn-danger">Eliminar</button>
             </div>
         </div>
     </div>
