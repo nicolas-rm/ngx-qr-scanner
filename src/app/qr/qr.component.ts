@@ -15,18 +15,18 @@ export class QrComponent implements AfterViewInit {
             },
         },
         vibrate: 300,
-        // canvasStyles: [
-        //   {
-        //     lineWidth: 1,
-        //     fillStyle: '#00950685',
-        //     strokeStyle: '#00950685',
-        //   },
-        //   {
-        //     font: '17px serif',
-        //     fillStyle: '#ff0000',
-        //     strokeStyle: '#ff0000',
-        //   }
-        // ],
+        canvasStyles: [
+          {
+            lineWidth: 1,
+            fillStyle: '#00950685',
+            strokeStyle: '#00950685',
+          },
+          {
+            font: '17px serif',
+            fillStyle: '#ff0000',
+            strokeStyle: '#ff0000',
+          }
+        ],
     };
 
     public qrCodeResult: ScannerQRCodeSelectedFiles[] = [];
@@ -46,6 +46,16 @@ export class QrComponent implements AfterViewInit {
 
     public onEvent(e: ScannerQRCodeResult[], action?: any): void {
         // e && action && action.pause();
+        // Obtiene el valor del código QR / Barcode
+        // alert(e.map((f) => f.value).join('\n')); 
+
+        // Apaga la cámara después de obtener el valor del código QR / Barcode
+        this.handle(action, 'stop');
+
+        // Cerrar el modal 
+        document.getElementById('buttonCloseModal')?.click();
+        alert(e.map((f) => f.value).join('\n')); 
+
         console.log(e);
     }
 
