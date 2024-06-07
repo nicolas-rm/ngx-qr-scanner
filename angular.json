@@ -42,6 +42,7 @@
                         "styles": [
                             "src/styles.scss",
                             "node_modules/bootstrap/scss/bootstrap.scss",
+                            "src/assets/css/bootsWatch.css",
                             "src/assets/tabler-icons/tabler-icons.scss"
                         ],
                         "scripts": [
